@@ -16,7 +16,7 @@ sys.path.insert(0, str(SKILL_DIR / "scripts" / "utils"))
 
 # Import utility modules
 import state_manager as sm
-from apify_client import (
+from apify_scraper import (
     scrape_instagram, scrape_facebook, filter_by_engagement,
     get_top_posts, estimate_cost, _load_config
 )

@@ -1,0 +1,49 @@
+{
+  "apify": {
+    "token": "ENV:APIFY_TOKEN",
+    "actors": {
+      "instagram": "apify/instagram-search-scraper",
+      "facebook": "apify/facebook-posts-scraper"
+    },
+    "max_results_per_run": 100,
+    "proxy": { "useApifyProxy": true }
+  },
+  "keywords": {
+    "vi": ["suc khoe", "lieu phap anh sang", "photobiomodulation", "red light therapy", "tri lieu anh sang do"],
+    "en": ["wellness", "red light therapy", "photobiomodulation", "light therapy", "PBM"]
+  },
+  "thresholds": {
+    "viral": 5000,
+    "micro_viral": 500,
+    "engagement_rate_min": 0.03
+  },
+  "discord": {
+    "research_channel_id": "ENV:DISCORD_RESEARCH_CHANNEL_ID",
+    "content_channel_id": "ENV:DISCORD_CONTENT_CHANNEL_ID",
+    "admin_user_id": "ENV:DISCORD_ADMIN_USER_ID"
+  },
+  "sheets": {
+    "research_sheet_url": "ENV:GOOGLE_SHEETS_URL",
+    "research_column": "U",
+    "output_sheet_name": "Published Content",
+    "service_account_path": "ENV:GOOGLE_SERVICE_ACCOUNT_PATH"
+  },
+  "models": {
+    "analysis": "glm-5",
+    "generation": "glm-5",
+    "glm5_api_key": "ENV:GLM5_API_KEY",
+    "glm5_endpoint": "https://open.bigmodel.cn/api/paas/v4"
+  },
+  "budget": {
+    "daily_apify_cap_usd": 0.50,
+    "daily_glm5_cap_usd": 0.20,
+    "monthly_apify_cap_usd": 10.00,
+    "monthly_glm5_cap_usd": 5.00
+  },
+  "pipeline": {
+    "cron_time": "08:00",
+    "timezone": "Asia/Ho_Chi_Minh",
+    "max_posts_per_scrape": 10,
+    "approval_timeout_hours": 24
+  }
+}

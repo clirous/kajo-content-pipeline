@@ -1,0 +1,27 @@
+# State files
+pipeline_state.json
+history/
+
+# Secrets (copy from config.json.example)
+assets/config.json.example
+
+# Generated output
+repomix-output.xml
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.so
+.venv/
+venv/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
